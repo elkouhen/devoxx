@@ -8,6 +8,7 @@ Mehdi EL KOUHEN <mehdi.elkouhen@softeam.fr>
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
+== link:kubernetes.adoc[Kubernetes]
 
 == Test driven infrastructure avec Docker
 
