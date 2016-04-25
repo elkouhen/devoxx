@@ -1,0 +1,198 @@
+== Kubernetes
+
+=== Solutions d'orchestration
+
+*Fleet*
+
+* fait partie de coreos (image minimaliste)
+* basé sur etcd
+* bas niveau et limité
+
+*Swarm*
+
+* créé par docker
+* basé sur consul
+
+*Rancher*
+
+* image minimaliste
+* support kubernetes, swarm
+
+*Kubernetes*
+
+* repose sur etcd
+* compatible docker et rkt
+* grosse communauté
+
+*Mesos - Marathon*
+
+* pas conçu pour faire du docker
+
+=== Cluster Kubernetes
+
+Plusieurs machines appelées nodes (workers, masters)
+
+=== Binaires Kubernetes
+
+*Master*
+
+*	*etcd :* bdd cle-valeur qui stocke l'état du cluster
+*	*scheduler :* vision des ressources du cluster, distribue les conteneurs (Pods)
+*	*api server :* interface REST du cluster accessible via kubectl
+*	*controller manager :* boucle de contrôle de vérification des ressources kubernetes
+
+*Worker*
+
+*	*docker :* démon pour le démarrage des conteneurs
+*	*kubelet :* communique avec docker pour démarrer les conteneurs, redémarrer les conteneurs, monter les volumes des Pods
+*	*kube-proxy :* ajout et suppression de services (communication entre Pods) et endpoints -> mise à jour des iptables
+
+=== Ressources
+
+*Pod*
+
+* peut contenir plusieurs conteneurs (partagent un contexte, adresses IP virtuelles, volumes)
+* c'est l'unité réplicable
+* lié à un node
+* temporaire
+
+*Labels*
+
+* pair clef valeur
+* attachable aux ressources kubernetes
+* on peux requêter les ressources par labels (exemple : get pods -l 'release in (stable,canaty)')
+
+*Replication Controller*
+
+* on lui donne un template (la ressource à répliquer) + nombre de pods
+* il faut toujours passer par le RC pour créer les pods (sinon aucun garantie qu'ils restent vivants)
+
+*Replica Sets*
+
+* similaire au RC
+* s'assurer qu'un certain nombre de replicas d'un pod tourne
+
+*Service*
+
+* expose des pods (leur fournit une adresse IP visible dans le cluster uniquement et/ou en dehors)
+
+=== Communication inter noeuds
+
+Les pods ne savent pas où sont situés les autres Pods. Comment est-ce qu'un Pod peut appeler un autre Pod ?
+
+Liste de solutions
+
+* Google Compute Advanced Routing
+* Flannel
+* OpenVSwitch
+* Weave
+* Calico
+* Romana
+
+Mode de fonctionnement de Flannel
+
+* développée par CoreOS
+* couche L2 du réseau (ajouter des infos au packet pour qu'il sache ou aller)
+* les workers sont dans un réseau géré par Flannel
+* chaque POD a une IP
+* Flannel est connecté sur etcd (il sait où se trouvent les PODs)
+
+Google utilise GCA
+
+*Service*
+
+* Un POD est éphémère
+* Offre une adresse IP durable
+* Joue le rôle de load balancer
+* 3 types ClusterIP, NodePort LoadBalancer
+
+*ClusterIP*
+
+* fournit une adresse IP accessible uniquement dans le cluster
+* variables d'environnement fournies au PODs (attention à l'ordre de création des pods et services)
+* utiliser le addon kubernetes skydns (myapp.myservice.example.com)
+
+*NodePort*
+
+* permet d'appeler un service sur un noeud donné
+
+*LoadBalancer*
+
+* pas vraiment un service de type loadbalancer au sens HAProxy
+* il route les requêtes d'un client vers un pod (toujours le même)
+* on demande au cloud provider de fournir un loadbalancer
+
+*Deployments*
+
+* Facilite le déploiement des applis
+* Supporte plusieurs types de mises à jour (Rolling Update, Replace, A/B deployment)
+
+*Health Checking*
+
+* Cycle de vie des pods : pending -> Running -> Succeeded | Failed ou Unknown
+* kubeclt fait le healthcheck readinessprobe, livenessprobe
+* plusieurs healthchecks : http health checks, container exec , ...
+
+*Reaction ?*
+
+* Readiness -> si pod non ready -> kubernetes va dereferencer son IP des services
+* Liveness -> si non vivant -> dépend de la politique de redémarrage (Always, Onfailure, Never)
+
+*Volumes*
+
+* Les pods sont éphémères (Les données d'un POD mort disparaissent)
+* Permet de créer un point de montage dans le conteneur
+
+*Plusieurs types*
+
+* Non persistants
+* Partages réseau persistant : NFS, glusterfs
+* Stockage fournit par cloud provider
+* persistentVolumeClaim
+
+emptydir :
+
+* survit au crash d'un conteneur
+* supprimé lors de l'arrêt/déplacement du pod
+
+secret :
+
+* volume particulier pour stocker les informations sensibles
+* stockage base64 sur etcd
+
+persistentVolumeClaim : abstraction du type de volume
+
+* notion de reclaim policy (retain, recycle)
+
+=== Namespaces
+
+* Gestion des différents environnements
+* Cloisonnement logique et non physique
+
+=== Gestion des ressources
+
+Limitation des ressources utilisées par un POD
+
+* CPU, mémoire
+
+=== Horizontal scaling
+
+Adapter auto le nombre de replicas
+
+=> Horizontal Pod Autoscaler
+
+=== Stratégie de placement des PODs
+
+* par défaut : n'importe où dans le cluster
+* daemon sets : tous les nodes exécute un pod définit
+* jobs : ???
+
+=== Haute disponibilité
+
+Qu'est-ce qui se passe si le master tombe ? Normalement ça se passe bien
+
+3 règles
+
+* un cluster etcd
+* volumes durables
+* un master par zone (-> élection d'un master)
