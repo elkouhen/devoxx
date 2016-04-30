@@ -8,30 +8,30 @@ Mehdi EL KOUHEN <mehdi.elkouhen@softeam.fr>
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
-=== link:kubernetes.adoc[Kubernetes University, Cap sur l’orchestration Docker !]
+==== link:kubernetes.adoc[Kubernetes University, Cap sur l’orchestration Docker !]
 
-=== link:test-driven-infra.adoc[Test Driven Infrastructure avec Docker]
+==== link:test-driven-infra.adoc[Test Driven Infrastructure avec Docker]
 
-=== link:apache-maven-jigsaw.adoc[Apache Maven, Java 9 et le projet Jigsaw]
+==== link:apache-maven-jigsaw.adoc[Apache Maven, Java 9 et le projet Jigsaw]
 
-=== link:drill.adoc[SQL on Everything" avec Apache Drill]
+==== link:drill.adoc[SQL on Everything" avec Apache Drill]
 
-=== link:es6.adoc[ES6+ maintenant !]
+==== link:es6.adoc[ES6+ maintenant !]
 
-=== link:unikernel.adoc[Unikernel: Le conteneur du futur]
+==== link:unikernel.adoc[Unikernel: Le conteneur du futur]
 
-=== link:vertx.adoc[Vert.x pour l'IoT dans l'embarqué]
+====  link:vertx.adoc[Vert.x pour l'IoT dans l'embarqué]
 
-=== link:consul.adoc[A la découverte du service discovery]
+==== link:consul.adoc[A la découverte du service discovery]
 
-=== link:loop.adoc[Loop, améliorez votre workflow de développement d'application Web]
+==== link:loop.adoc[Loop, améliorez votre workflow de développement d'application Web]
 
-=== link:angular.adoc[D'Angular 1 à Angular 2 : Préparez vous dès maintenant à la migration]
+==== link:angular.adoc[D'Angular 1 à Angular 2 : Préparez vous dès maintenant à la migration]
 
-=== link:asciidoc.adoc[Comment Asciidoctor peut vous aider pour votre doc]
+==== link:asciidoc.adoc[Comment Asciidoctor peut vous aider pour votre doc]
 
-=== link:spring-cloud.adoc[Spring Cloud *: Exploring Spring Cloud Implementations]
+==== link:spring-cloud.adoc[Spring Cloud *: Exploring Spring Cloud Implementations]
 
-=== link:cdi.adoc[Les nouveautés de CDI 2.0]
+==== link:cdi.adoc[Les nouveautés de CDI 2.0]
 
-=== link:jigsaw.adoc[Jigsaw est là pour nous sauver]
+==== link:jigsaw.adoc[Jigsaw est là pour nous sauver]
