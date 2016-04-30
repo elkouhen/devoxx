@@ -1,6 +1,6 @@
 == Apache Drill
 
-Permet de faire du SQL sur plein de bases de données (CSV, JSON, MongoDB, SQL, ...)
+Permet de faire du SQL sur différentes sources de données (CSV, JSON, MongoDB, SQL, ...)
 
 Dans un projet BigData il y'a 4 Phases
 

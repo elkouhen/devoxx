@@ -21,7 +21,7 @@ Les modules sont une réponse à ces soucis
 Jigsaw a des contraintes
 
 * il faut que les builds avec maven gradle fonctionnent
-* on veut que les applications jboss module, osgi, java ee fonctionne encore avec jigsaw
+* on veut que les applications jboss module, osgi, java ee fonctionnent encore avec jigsaw
 
 Jigsawifier ?
 

@@ -10,10 +10,9 @@ Comment tester automatiquement ses scripts de provisionning ?
 
 *Méthodologie initiale :*
 
-* lancer le provisonning
-* 2 à 3 minutes pour reboot et provisionning
+** Problème initiale **
 
-=> Trop long
+* 2 à 3 minutes pour reboot et provisionning => Trop long
 
 *Solution :*
 
@@ -37,4 +36,4 @@ Comment tester automatiquement ses scripts de provisionning ?
 * pas de gestion de la conf réseau
 * pas de formattage disque
 
-=> Il faut aussi exécuter les tests sur des vraies machines
+=> Il faut continuer à exécuter les tests sur des vraies machines

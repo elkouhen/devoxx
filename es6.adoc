@@ -31,7 +31,7 @@ Babel est utilisé pour tout le code de facebook
 * Template String ` ${person.age} `
 * Let et const pour remplacer var (scope fonction)
 * Littéraux étendus : octaux binaires unicode
-* Fonctions flechees
+* Fonctions fléchées
 * Module :
 ** export
 ** import
@@ -41,6 +41,5 @@ Babel est utilisé pour tout le code de facebook
 * Meta programmation
 ** Proxy
 * Décorateurs
-** composants d'ordre supérieur
 
 => lebab pour transformer du ES5 vers ES6

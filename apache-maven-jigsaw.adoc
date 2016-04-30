@@ -3,10 +3,10 @@
 Evolutions java 9 impactantes :
 
 * D'après java -version, le binaire est tjs du java 8 => mais StringConcatFactory not found
-* JEP 223 : gestion des version (majeur.mineur.security)
-* JEP 261 : support des modules
-* JEP 247 : compile pour différentes versions de java (notamment compiler avec java 9 en utiliser le rt.jar java 8)
-* JEP 238 :
+* JEP 223 : Nouvelle gestion des version (majeur.mineur.security)
+* JEP 261 : Support des modules
+* JEP 247 : Multi Release JAR
+* JEP 238 : Compilation pour d'anciennes versions de java (notamment compiler avec java 9 en utiliser le rt.jar java 8)
 
 Statut
 

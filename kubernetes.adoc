@@ -16,7 +16,7 @@
 *Rancher*
 
 * image minimaliste
-* support kubernetes, swarm
+* supporte kubernetes, swarm
 
 *Kubernetes*
 
@@ -60,7 +60,7 @@ Plusieurs machines appelées nodes (workers, masters)
 
 * pair clef valeur
 * attachable aux ressources kubernetes
-* on peux requêter les ressources par labels (exemple : get pods -l 'release in (stable,canaty)')
+* on peux requêter les ressources par labels (exemple : get pods -l 'release in (stable,canary)')
 
 *Replication Controller*
 
@@ -70,7 +70,6 @@ Plusieurs machines appelées nodes (workers, masters)
 *Replica Sets*
 
 * similaire au RC
-* s'assurer qu'un certain nombre de replicas d'un pod tourne
 
 *Service*
 
@@ -80,7 +79,7 @@ Plusieurs machines appelées nodes (workers, masters)
 
 Les pods ne savent pas où sont situés les autres Pods. Comment est-ce qu'un Pod peut appeler un autre Pod ?
 
-Liste de solutions
+*Liste de solutions*
 
 * Google Compute Advanced Routing
 * Flannel
@@ -89,9 +88,9 @@ Liste de solutions
 * Calico
 * Romana
 
-Mode de fonctionnement de Flannel
+*Mode de fonctionnement de Flannel*
 
-* développée par CoreOS
+* développé par CoreOS
 * couche L2 du réseau (ajouter des infos au packet pour qu'il sache ou aller)
 * les workers sont dans un réseau géré par Flannel
 * chaque POD a une IP

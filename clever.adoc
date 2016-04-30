@@ -1,6 +1,0 @@
-== Clever Cloud - IT Automation
-
-Attention a l'utilisation de conteneurs docker différents de la cible
-
--> risques de sécurité (exemple docker qui à une glibc différente à celle de la machine host)
--> mieux de ne pas mixer les distribs
