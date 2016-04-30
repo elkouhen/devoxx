@@ -1,0 +1,11 @@
+== Loop
+
+Objectif : industrialiser le workflow de développement
+
+Agnostique aux technos utilisés
+
+Dans un script devloop.js
+
+* on indique la liste des "composants" de l'appli
+* on indique comment les compiler et les démarrer
+* on indique quand les compiler

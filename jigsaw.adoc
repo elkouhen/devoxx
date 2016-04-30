@@ -1,0 +1,72 @@
+== Jigsaw
+
+Problèmes
+
+* JAR Hell :
+** une appli utilise 2 librairies asm 2.3 et asm 3.1
+** au démarrage de l'application scan linéaire pour trouver une classe : une classe asm 3.1 peut hériter d'une classe d'asm 2.3
+** On veut Fidélité Compilation ~ Exécution
+
+* java c'est gros
+** rt.jar 66 Mb
+*** Spring Context 1.1 Mb
+
+* Sécurité
+** Les classes de rt.jar sont privilégiées (souci de sécurité)
+** Java n'a qu'un seul mur de sécurité. Dès qu'on le traverse, ...
+
+Les modules sont une réponse à ces soucis
+* packages importés, exportés, cachés
+
+Jigsaw a des contraintes
+
+* il faut que les builds avec maven gradle fonctionnent
+* on veut que les applications jboss module, osgi, java ee fonctionne encore avec jigsaw
+
+Jigsawifier ?
+
+* outils : jdeps permet de déterminer les dépendances d'un package
+* on commence par déclarer les modules (fichier module-info.java)
+
+[source]
+module fr.drgaon.rt{
+	requires java.base
+	export fr.////
+}
+
+-> contrairement à OSGi on ne met pas les numéros de version dans module-info.java
+
+javac prend en paramètre un modulepath et un classpath
+
+* les modules dans modulepath ne voit pas le classpath
+
+Modules automatiques : la plateforme construit le module-info automatiquement
+
+Le nom du module est inféré à partir du nom du jar
+
+A la création d'un jar, on peux rajouter des meta infos (exemple: module-version, main-class)
+
+Les requires ne sont pas transitifs
+
+Il existe le require public (transitif à un saut)
+
+On peut restreindre les exports de package
+
+[source]
+exports com.softeam to fr.uml.dragon.ast
+
+-> permet d'empêcher l'utilisation sun.misc.Unsafe
+
+Module Service pour découpler l'interface de son implémentation
+
+[source]
+consomme
+uses fr.uml.dragon.
+
+[source]
+fournisseur
+provides fr.kkkk to fr.uml
+
+On démarre maintenant le module à démarrer
+
+jlink pour générer un executable pour une architecture cible (ARM)

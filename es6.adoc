@@ -1,0 +1,46 @@
+== ES6
+
+ES3 utilisé pour pré IE 9
+
+ES5 utilisé pour IE9+
+
+Prise en charge native
+
+* Navigateurs evergreen 90% a 98%
+* Safari 53% (bridage volontaire)
+* Node 4.43 48% 5,10 58% et Node LTS 6 96%
+
+Sinon on peut transpiler du code ES6 -> ES5 avec Babel
+
+Babel est utilisé pour tout le code de facebook
+
+* Possibilité de configurer ce qui est transpilé (en fonction de la cible)
+
+=== Nouveautés ES6
+
+* Litteraux objet { type : coco, id, text}
+* Mot clefs : class, extends, constructor, super
+* Accesseurs transparents get et set en prefix
+* Variables statiques : static
+* Destructuration
+** piocher dans des objets structurés { x } = mavariable
+** paramètre de fonctions
+** gestion des tableaux
+* Rest & spread
+* Valeurs par défaut
+* Template String ` ${person.age} `
+* Let et const pour remplacer var (scope fonction)
+* Littéraux étendus : octaux binaires unicode
+* Fonctions flechees
+* Module :
+** export
+** import
+** Chargement dynamique via System.import
+* Promesses en natif : standard A+
+** async (fonction déclarée asynchrone) / await (appel en synchrone)
+* Meta programmation
+** Proxy
+* Décorateurs
+** composants d'ordre supérieur
+
+=> lebab pour transformer du ES5 vers ES6

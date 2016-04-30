@@ -1,0 +1,7 @@
+== Asciidoctor
+
+*Killer Feature :* inclusion de portions de fichiers (via des tag begin et end)
+
+plugin chrome pour voir les fichiers asciidoctor
+
+gitlab gère asciidoctor

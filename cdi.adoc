@@ -1,0 +1,15 @@
+== Nouveautés CDI 2.0
+
+CDI 2.0 : JSR 365
+
+* Weld 3 implémentation de référence
+* cdi-spec.org
+
+New Features :
+
+* support des évènements asynchrones
+* annotation startup (pas encore fait, mais possible via utilisation d'un observer)
+* faire du CDI en dehors de Java EE
+* AOP pour custom beans (pas fini)
+* support de la sécurité (sorti dans une autre spec)
+* ordonnancement des observateurs

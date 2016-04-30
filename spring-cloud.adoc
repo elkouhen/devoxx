@@ -1,0 +1,35 @@
+== Spring Cloud *
+
+Besoin (-> 12factor.net) :
+
+* Service Registry
+* Configuration
+
+*Service Registry*
+
+* @EnableDiscoveryClient
+* discoveryClient.choose("serviceId") -> {host, port}
+* RestTemplate (pas besoin de mettre le hote et port mais le nom du service)
+* @FeinClient : client déclaratif
+
+*Config*
+
+* @ConfigurationProperties (reloadable), @Value, Environment
+
+*Spring Cloud Config Server*
+
+* similaire à celui de netflix
+* ptés dans GIT, SVN
+* @RefreshScope pour le rechargement des beans après modif des propriétés
+* Webhooks support for github, gitlab and bitbucket
+* gestion de propriétés globales + par projet
+
+*Service Discovery*
+
+* Netflix (trop orienté java, mature, mise à jour longues -> jusqu'à 90 s)
+* Consul
+** service discovery & configuration, polyglot, HTTP API and DNS, ACLs, Health Checks, multi datacenter, Vault
+** young, agent on every host
+* Zookeeper
+** Consistent Store, mature,
+** scaling, difficile pour les OPS,

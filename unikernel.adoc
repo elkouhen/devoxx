@@ -1,0 +1,13 @@
+== Unikernel The Future of Containers
+
+Archi docker : OS host + Daemon docker + conteneur docker
+
+MirageOS (projet Xen) : OS pour packager les applications sur unikernel
+
+Constat : pour développer un routeur je n'ai pas besoin d'un kernel avec un driver de disque
+
+* 1ere idée : modulariser l'OS et ne prendre dans le conteneur que le strict nécessaire
+* 2nde idée :
+** appli en caml ou la définition du module abstrait les composants systèmes utilisés
+** ensuite on build l'appli en fonction de la cible
+** production d'une machine virtuelle xen ne contenant que les composants nécessaires

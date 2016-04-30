@@ -1,0 +1,35 @@
+== Apache Drill
+
+Permet de faire du SQL sur plein de bases de données (CSV, JSON, MongoDB, SQL, ...)
+
+Dans un projet BigData il y'a 4 Phases
+
+* Ingestion des données
+* Stockage (file systeme, etc...)
+* Traitement (Spark)
+* Consommation dans les applications (SQL)
+
+De plus en plus de données sont non structurées
+
+* intéressant de consommer en SQL parce qu'a la fin on tombe sur du reporting (qlickview, tableau, excel)
+
+Dans Drill, définition du schéma à la volée (Drill essaie de deviner)
+
+[source]
+select * from dfs.yelp.`business.json`
+	      plugin à utiliser - schéma ou workspace - le fichier ou la table
+
+Drill est orienté big data
+
+* distribution d'un fichier sur plein de noeuds avant de requêter
+
+Drill apporte des extension à SQL pour gérer les structures hiérarchiques de JSON
+
+[source]
+exemple select name, stars, b.hours.Friday friday FROM ...
+
+Drill fournit des opérateur de mise à plat de liste pour tomber sur du SQL normalisé
+
+Drill permet de stockage de données intermédiaires via parquet (format de fichier optimisé pour le requêtage)
+
+Drill permet de faire des jointures entre données stockées dans des sources différentes (fichier + mongo)

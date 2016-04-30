@@ -1,0 +1,55 @@
+== HTTPS
+
+HTTP dans une session SSL/TLS
+
+*	google prefere https pour SEO
+* firefox et chrome bloquent certaines api javascript hots https (geolocation, ...)
+*	HTTP/2 ne fonctionne qu'en HTTPS
+
+Pourquoi ?
+
+* Confidentialité
+* Authentification
+* Intégrité
+* Transparence
+* Spontanéité
+
+*Chiffrement symétrique*
+
+* On chiffre et déchiffre en utilisant la même clef
+
+*Chiffrement asymétrique*
+
+* Une clef (privée) pour chiffrer et clef (publique) pour déchiffrer
+** moins performant que le chiffrement symétrique
+
+*Fonction de hashage*
+
+HMAC : fonction de hashage influencée par une clef
+
+*Signature numérique d'un document*
+
+Chiffrement du résultat du hashage appliquée au document
+
+*Poignée de main*
+
+-> Client Hello (contient la version max TLS 1.2, Session ID, Liste Algorithmes ordonnées de chiffrement supportés, SNI Serveur Name Indication)
+<- Serveur hello (version de TLS, Session ID, Algorithme de Chiffrement utilisé, Certificat au format X509)
+-> Choix un nombre
+
+Diffie
+
+*3 types de certificats*
+
+* domaine validation (propriétaire d'un domaine)
+* organisation validation (vérification de l'info)
+* extended validation (enquete)
+
+Lets encrypt : autorité de certification, protocole ACME + Agent
+
+*Révocation*
+
+* *CRL :* liste de certificats invalide dans le certificat racine
+* *OCSP :* réponse par authorité de certification
+* *OSCP Stampling :* le serveur joint une preuve valable quelque minutes
+* *CRLSet :*

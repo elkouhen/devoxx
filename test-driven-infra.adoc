@@ -1,0 +1,40 @@
+== Test driven infrastructure avec Docker
+
+http://github.com/WeScale/salt-docker-integration
+
+Saltstack : similaire à ansible, YAML pour décrire le provisionning
+
+* Provisionning orienté rôle : exemple associer le rôle redis à une machine pour installer redis sur la machine
+
+Comment tester automatiquement ses scripts de provisionning ?
+
+*Méthodologie initiale :*
+
+* lancer le provisonning
+* 2 à 3 minutes pour reboot et provisionning
+
+=> Trop long
+
+*Solution :*
+
+* provisionning de conteneurs docker (salt, chef, etc.)
+* rajout d'assertions pour tester le système
+
+*Conception du framework de test*
+
+* Fichier de rôles
+* Fichier asserts
+* Fichier grains (pour spécialiser les machine i.e. affecter rôle et donc installer quelque chose sur la machine)
+
+*Solution finale*
+
+* Provisionning du master
+* Provisionning du minion
+* Application du provisionning du minion via le master
+
+*Limitations :*
+
+* pas de gestion de la conf réseau
+* pas de formattage disque
+
+=> Il faut aussi exécuter les tests sur des vraies machines

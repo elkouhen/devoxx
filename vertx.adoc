@@ -1,0 +1,19 @@
+
+== Vert.x
+
+Librairie pour construire des applications réactives
+
+* event driven
+* non blocking
+* event loop
+* polyglotte
+
+Ne jamais bloquer l'event loop
+
+* worker thread pool pour appeler du code bloquant
+
+Event bus (distribué)
+
+* publish - subscribe
+* point 2 point
+* request - response

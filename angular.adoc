@@ -1,0 +1,30 @@
+== De angular 1 -> angular 2
+
+Différences
+- langage javascript -> typescript
+- MV* -> Composant
+- databinding bidirectionnel -> unidirectionnel
+
+Bonnes pratiques ?
+
+* organiser en modules fonctionnels
+* fini les factory -> utiliser service (fonction constructrices)
+* utiliser controllerAs (bannir $scope) (a faire à la définition du contrôleur) -> éviter l'héritage par prototype de scope
+* angular 1.5 apporte les composants (tout doit devenir composant)
+* routing ?
+** le routeur angular2 a été backporté vers angular 1
+* système de module : solution systemJS (polyfill ES6 utilisé par angular)
+* JSPM à la place de NPM (+ général que npm , bien intégré à systemjs)
+* typescript (compatible js, typage structurel, type wildcard : any)
+* bootstrapper l'application avec System.import & appel de angular.bootstrap au lieu de ng-app
+* remplacer $scope.watch par les getters et setters
+
+angular 2 fournit une API pour mixer du angular 1 et angular2
+-> le noeud racine reste un noeud angular1
+
+=> upgradeadapter pour bootstrapper l'application
+
+=> on downgrade les composants angular2 en angular 1 pour les utiliser dans des composants angular 1
+=> on upgrade les composants angular 1 en angular 2 pour les utiliser dans des composants angular 2
+
+ng-forward permet d'utiliser les décorateurs angular 2 en angular 1

@@ -1,0 +1,62 @@
+== Service discovery
+
+Service ? -> adresse IP et port
+
+Types d'enregistrements DNS
+
+* *Type A* 1 adresse IP v4
+* *Type AAAA* 1 adresse IP v6
+* *Type SRV* n adresses IP port (avec une gestion de priorité)
+
+Histoire archi logicielle
+
+* Monolithique (EJB, JNDI) -> non scalable
+* SOA / Micro services -> service déployés sur n serveurs
+
+Histoire archi physique
+
+* avant serveur physique
+* maintenant 1 service par VM ou conteneur (-> on multiplie les services et ports)
+* On déploie aussi sur le cloud
+** a chaque redémarrage d'un VM elle peut changer d'adresse IP
+
+SDP Service discovery protocol : annuaire 1 nom de service -> IP + port
+
+=== Exemple de solutions
+
+* zookeeeper
+* etcd
+* eureka
+* consul
+
+Zookeper & etcd basé sur un key value distribué
+
+=== Consul
+
+* contient un key value distribué
+* 2 types d'agents
+** 1 agent serveur
+** 1 agent client pour s'enregistrer du client au serveur
+
+*Caractéristiques du Client :*
+
+* forward des requetes au service
+* gestion du healthcheck
+* stateless
+
+Chaque agent client s'enregistre au niveau des agent serveur
+
+* API rest pour obtenir des infos sur un service en particulier
+* infos aussi disponibles dans le DNS
+
+Consul fourni un outil consul-template pour générer la conf haproxy automatiquement
+
+* On peut enregistrer/desenregistrer un service via une API http
+
+*Conseils*
+
+* 3 ou 5 master
+* créer un user spécifique pour consul
+* spécialiser les agents
+* gérer les mots de passe avec vault
+* intégrer avec un orchestrateur (messo, nomad, ...)
