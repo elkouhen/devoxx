@@ -8,34 +8,30 @@ Mehdi EL KOUHEN <mehdi.elkouhen@softeam.fr>
 // Uncomment next line to set page size (default is Letter)
 //:pdf-page-size: A4
 
-=== link:kubernetes.adoc[Kubernetes]
+=== link:kubernetes.adoc[Kubernetes University, Cap sur l’orchestration Docker !]
 
-=== link:test-driven-infra.adoc[Kubernetes]
+=== link:test-driven-infra.adoc[Test Driven Infrastructure avec Docker]
 
-=== link:apache-maven-jigsaw.adoc[Kubernetes]
+=== link:apache-maven-jigsaw.adoc[Apache Maven, Java 9 et le projet Jigsaw]
 
-=== link:drill.adoc[Kubernetes]
+=== link:drill.adoc[SQL on Everything" avec Apache Drill]
 
-=== link:es6.adoc[Kubernetes]
+=== link:es6.adoc[ES6+ maintenant !]
 
-=== link:unikernel.adoc[Kubernetes]
+=== link:unikernel.adoc[Unikernel: Le conteneur du futur]
 
-=== link:vertx.adoc[Kubernetes]
+=== link:vertx.adoc[Vert.x pour l'IoT dans l'embarqué]
 
-=== link:loop.adoc[Kubernetes]
+=== link:consul.adoc[A la découverte du service discovery]
 
-=== link:consul.adoc[Kubernetes]
+=== link:loop.adoc[Loop, améliorez votre workflow de développement d'application Web]
 
-=== link:clever.adoc[Kubernetes]
+=== link:angular.adoc[D'Angular 1 à Angular 2 : Préparez vous dès maintenant à la migration]
 
-=== link:https.adoc[Kubernetes]
+=== link:asciidoc.adoc[Comment Asciidoctor peut vous aider pour votre doc]
 
-=== link:angular.adoc[Kubernetes]
+=== link:spring-cloud.adoc[Spring Cloud *: Exploring Spring Cloud Implementations]
 
-=== link:asciidoc.adoc[Kubernetes]
+=== link:cdi.adoc[Les nouveautés de CDI 2.0]
 
-=== link:spring-cloud.adoc[Kubernetes]
-
-=== link:cdi.adoc[Kubernetes]
-
-=== link:consul.adoc[Kubernetes]
+=== link:jigsaw.adoc[Jigsaw est là pour nous sauver]

@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="286ce7ad-8b9d-4f8e-9070-ce2db0b10681" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular.adoc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apache-maven-jigsaw.adoc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asciidoc.adoc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cdi.adoc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clever.adoc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consul.adoc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drill.adoc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/es6.adoc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/https.adoc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jigsaw.adoc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/loop.adoc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring-cloud.adoc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-driven-infra.adoc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unikernel.adoc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vertx.adoc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rapport.adoc" afterPath="$PROJECT_DIR$/rapport.adoc" />
     </list>
     <ignored path="Devoxx.iws" />
@@ -42,8 +28,8 @@
       <file leaf-file-name="rapport.adoc" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rapport.adoc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+            <state relative-caret-position="295">
+              <caret line="26" column="85" selection-start-line="26" selection-start-column="85" selection-end-line="26" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -734,12 +720,12 @@
       <option name="presentableId" value="Default" />
       <updated>1462035770480</updated>
       <workItem from="1462035771714" duration="286000" />
-      <workItem from="1462036068777" duration="462000" />
+      <workItem from="1462036068777" duration="1087000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="748000" />
+    <option name="totallyTimeSpent" value="1373000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -1015,8 +1001,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rapport.adoc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+        <state relative-caret-position="295">
+          <caret line="26" column="85" selection-start-line="26" selection-start-column="85" selection-end-line="26" selection-end-column="85" />
           <folding />
         </state>
       </provider>
